@@ -18,10 +18,10 @@ namespace VsDocumentTypeEventsExt.Lsp
         [BaseDefinition(CodeRemoteContentDefinition.CodeRemoteContentTypeName)]
         internal static ContentTypeDefinition MyContentTypeDefinition;
 
-        [Export]
-        [FileExtension(".sql")]
-        [ContentType(ContentTypeName)]
-        internal static FileExtensionToContentTypeDefinition SqlFileExtensionDefinition;
+        //[Export]
+        //[FileExtension(".sql")]
+        //[ContentType(ContentTypeName)]
+        //internal static FileExtensionToContentTypeDefinition SqlFileExtensionDefinition;
 
         [Export]
         [FileExtension(".bar")]

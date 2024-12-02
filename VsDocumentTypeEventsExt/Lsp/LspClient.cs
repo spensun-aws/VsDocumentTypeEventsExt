@@ -18,6 +18,7 @@ namespace VsDocumentTypeEventsExt.Lsp
     [Export(typeof(ILanguageClient))]
     //[ContentType("JSON")] // This isn't enough to make VS send doc messages for JSON files
     [ContentType(JsonContentType.ContentTypeName)] // This is required to get textDoc messages for JSON files
+    [ContentType(SqlContentType.ContentTypeName)]
     [ContentType(SampleContentType.ContentTypeName)]
     [ContentType("code")]
     public class LspClient : ILanguageClient
@@ -110,7 +111,7 @@ namespace VsDocumentTypeEventsExt.Lsp
                 // binary may reside elsewhere for other developers
                 ProcessStartInfo info = new ProcessStartInfo();
                 info.FileName = "dotnet";
-                info.Arguments = @"D:\code\experiments\VsDocumentTypeEventsExt\LspServer\bin\Debug\net8.0\LspServer.dll";
+                info.Arguments = @"C:\Users\spensun\office\Projects\Code\experimental\VsDocumentTypeEventsExt\LspServer\bin\Debug\net8.0\LspServer.dll";
                 info.RedirectStandardInput = true;
                 info.RedirectStandardOutput = true;
                 info.UseShellExecute = false;
